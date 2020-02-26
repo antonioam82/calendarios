@@ -18,6 +18,7 @@ def mes_valido(n): #VALIDAR DATO DE ENTRADA (MES)
          n=OKI(input("Introduzca un mes valido: "))
      return n
 
+
 while True:
     print("\n------------------------------CALENDARIOS------------------------------\n")
     print("""Escoja una opción:
@@ -29,15 +30,12 @@ B)Ver el calendario correspondiente a un año y mes determinados.
         anno=anno_valido(OKI(input("Introduce el año cuyos calendarios desea ver: ")))
         cl=calendar.TextCalendar()
         calendario=cl.formatyear(anno)
-        print("")
-        print(calendario)
     else:
         anno=anno_valido(OKI(input("Introduzca el año: ")))
         mes=mes_valido(OKI(input("Introduzca mes: ")))
         cl=calendar.TextCalendar()
         calendario=cl.formatmonth(anno,mes)
-        print("")
-        print(calendario)
+    print("\n"+calendario)
         
     conti=ns(input("¿Desea continuar?(n/s): "))
     if conti==("n"):
